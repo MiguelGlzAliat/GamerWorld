@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GamerWorld.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GamerWorld"
+    xmlns:views="clr-namespace:GamerWorld.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="GamerWorld">
+
+    <FlyoutItem Title="Menú">
+        <ShellContent Title="Sección 1" ContentTemplate="{DataTemplate views:Section1}" />
+        <ShellContent Title="Sección 2" ContentTemplate="{DataTemplate views:Section2}" />
+        <ShellContent Title="Sección 3" ContentTemplate="{DataTemplate views:Section3}" />
+        <ShellContent Title="Sección 4" ContentTemplate="{DataTemplate views:Section4}" />
+        <ShellContent Title="Sección 5" ContentTemplate="{DataTemplate views:Section5}" />
+        <ShellContent Title="Sección 6" ContentTemplate="{DataTemplate views:Section6}" />
+        <ShellContent Title="Sección 7" ContentTemplate="{DataTemplate views:Section7}" />
+    </FlyoutItem>
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+</Shell>

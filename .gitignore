@@ -1,0 +1,38 @@
+# Archivos y carpetas generadas por .NET
+bin/
+obj/
+app/bin/
+app/obj/
+*.user
+*.vs
+*.suo
+*.sln.cache
+*.csproj.user
+*.pidb
+*.sdf
+*.dbmdl
+*.pfx
+*.publishsettings
+*.psess
+
+# Archivos de configuración de macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archivos específicos de Visual Studio
+.vs/
+*.vscode/
+
+# Archivos generados por NuGet
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+global.json
+
+# Caché de dependencias de .NET
+.nuget/
+packages/
+node_modules/
+
