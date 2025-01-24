@@ -1,26 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Shell
-    x:Class="GamerWorld.AppShell"
-    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GamerWorld"
-    xmlns:views="clr-namespace:GamerWorld.Views"
-    Shell.FlyoutBehavior="Disabled"
-    Title="GamerWorld">
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:GamerWorld"
+       xmlns:views="clr-namespace:GamerWorld.Views"
+       x:Class="GamerWorld.AppShell">
 
-    <FlyoutItem Title="Menú">
-        <ShellContent Title="Sección 1" ContentTemplate="{DataTemplate views:Section1}" />
-        <ShellContent Title="Sección 2" ContentTemplate="{DataTemplate views:Section2}" />
-        <ShellContent Title="Sección 3" ContentTemplate="{DataTemplate views:Section3}" />
-        <ShellContent Title="Sección 4" ContentTemplate="{DataTemplate views:Section4}" />
-        <ShellContent Title="Sección 5" ContentTemplate="{DataTemplate views:Section5}" />
-        <ShellContent Title="Sección 6" ContentTemplate="{DataTemplate views:Section6}" />
-        <ShellContent Title="Sección 7" ContentTemplate="{DataTemplate views:Section7}" />
+    <!-- Página de Inicio -->
+    <FlyoutItem Title="Inicio" Icon="Resources/Icons/home.svg">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
     </FlyoutItem>
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <!-- Secciones del menú -->
+    <FlyoutItem Title="Mi Perfil" Icon="Resources/Icons/perfil.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section1}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Mis Compras" Icon="Resources/Icons/bolsa.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section2}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Favoritos" Icon="Resources/Icons/favs.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section3}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Guardado" Icon="Resources/Icons/guardado.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section4}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Carrito" Icon="Resources/Icons/carrito.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section5}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Notificaciones" Icon="Resources/Icons/notify.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section6}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Ajustes" Icon="Resources/Icons/config.svg">
+        <ShellContent ContentTemplate="{DataTemplate views:Section7}" />
+    </FlyoutItem>
 
 </Shell>
+

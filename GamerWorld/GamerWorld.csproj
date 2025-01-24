@@ -57,6 +57,30 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Icons\bolsa.svg" />
+	  <None Remove="Resources\Icons\carrito.svg" />
+	  <None Remove="Resources\Icons\config.svg" />
+	  <None Remove="Resources\Icons\favs.svg" />
+	  <None Remove="Resources\Icons\guardado.svg" />
+	  <None Remove="Resources\Icons\home.svg" />
+	  <None Remove="Resources\Icons\logo.webp" />
+	  <None Remove="Resources\Icons\notify.svg" />
+	  <None Remove="Resources\Icons\perfil.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\Icons\bolsa.svg" />
+	  <MauiImage Include="Resources\Icons\carrito.svg" />
+	  <MauiImage Include="Resources\Icons\config.svg" />
+	  <MauiImage Include="Resources\Icons\favs.svg" />
+	  <MauiImage Include="Resources\Icons\guardado.svg" />
+	  <MauiImage Include="Resources\Icons\home.svg" />
+	  <MauiImage Include="Resources\Icons\logo.webp" />
+	  <MauiImage Include="Resources\Icons\notify.svg" />
+	  <MauiImage Include="Resources\Icons\perfil.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1" />
