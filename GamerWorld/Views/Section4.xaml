@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GamerWorld.Views.Section4"
              Title="Guardado">
-    <VerticalStackLayout>
-        <Label 
-            Text="AQUI ESTARÁ LA SECCIÓN DE GUARDADOS"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <!-- WebView para Google Maps -->
+        <WebView
+            x:Name="mapWebView"
+            Navigated="OnWebNavigated"
+            Navigating="OnWebNavigating"
+        />
+
+
+        <!-- Spinner mientras se carga el mapa -->
+        <ActivityIndicator
+            x:Name="loadingSpinner"
+            IsRunning="True"
+            IsVisible="True"
+            Color="Purple"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="50"
+            HeightRequest="50"
+        />
+
+        <!-- Mensaje de error si la carga falla -->
+        <Label
+            x:Name="errorLabel"
+            Text="Error al cargar el mapa. Verifica tu conexión a internet."
+            TextColor="Red"
+            IsVisible="False"
+            FontSize="18"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+        />
+    </Grid>
 </ContentPage>
