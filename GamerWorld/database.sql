@@ -59,3 +59,36 @@ CREATE TABLE order_details (
     FOREIGN KEY (order_id) REFERENCES orders(id),
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+CREATE TABLE transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT,
+    amount DECIMAL(10, 2) NOT NULL,
+    payment_method ENUM('Card', 'PayPal', 'Crypto', 'Other') NOT NULL,
+    status ENUM('pending', 'completed', 'failed') DEFAULT 'pending',
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (order_id) REFERENCES orders(id)
+);
+
+CREATE TABLE inventory (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    product_id INT,
+    key_code VARCHAR(255) NOT NULL UNIQUE,
+    is_used BOOLEAN DEFAULT FALSE,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
+
+CREATE TABLE reviews (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    product_id INT,
+    rating INT CHECK (Rating BETWEEN 1 AND 5),
+    comment TEXT,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (product_id) REFERENCES products(id)
+);
